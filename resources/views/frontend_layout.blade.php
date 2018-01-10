@@ -15,12 +15,12 @@
             <div class="clearfix">
                 <h1 class="header-title">Klinik Sambal</h1>
                 <div class="header-login">
-                    <a href="">Login</a>
+                    <a href="/login">Login</a>
                 </div>
             </div>
         
         <nav class="navbar navbar-default">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-collapse">
                 <li><a href="#">Category 1</a><li>
                 <li><a href="#">Category 2</a><li>
                 <li><a href="#">Category 3</a><li>
