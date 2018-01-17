@@ -6,7 +6,10 @@
     display: inline-block;
 }
 
-
+.header-cart{
+    margin: 20px;
+    float: right;
+}
 
 .navbar .navbar-nav {
     display: inline-block;

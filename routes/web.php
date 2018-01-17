@@ -12,10 +12,12 @@
 */
 
 //home
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', "HomeController@index");
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/cart/content', 'CartController@getContent');
+
+Route::post('/cart/add-content', 'CartController@addContent');

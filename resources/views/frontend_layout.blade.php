@@ -15,8 +15,26 @@
             <div class="clearfix">
                 <h1 class="header-title">Klinik Sambal</h1>
                 <div class="header-login">
+                    @if(auth()->check())
+                    <a href="/logout"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Logout
+                    </a>
+
+                    <form id="logout-form" action="/logout" method="POST" style="...">
+                            {{ csrf_field()}}
+                    </form>
+                    @else
                     <a href="/login">Login</a>
+                    @endif
+
                 </div>
+
+                <div class="header-cart">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    <span class="badge" id="cart_count">0</span>
+                </div>
+
             </div>
         
         <nav class="navbar navbar-default">
@@ -36,4 +54,17 @@
 
         </div>
 
+        <script src="/js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+        function refreshCart() {
+            $.get('/cart/content', function(data){
+                $('#cart_count').html(data.length);
+
+            });
+        }
+        
+        
+        </script>
+        @yield('js')
     </body>
