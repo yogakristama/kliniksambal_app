@@ -31,8 +31,10 @@
                 </div>
 
                 <div class="header-cart">
+                <a href="/cart/detail">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     <span class="badge" id="cart_count">0</span>
+                </a>
                 </div>
 
             </div>

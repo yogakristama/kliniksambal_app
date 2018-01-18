@@ -21,4 +21,35 @@ class CartController extends Controller
 
         return "ok";
     }
+    public function getDetail()
+    {
+
+        $content = session()->get('cart_content');
+
+        $total = 0;
+        $productSelected = [];
+        $qty =[];
+
+        if(count($content)>0){
+            $qty = array_count_values($content);
+        $productSelected = DB::select("select * from product where id in (".join(',',$content).")");
+
+            foreach ($productSelected as $product) {
+                $total += ($product->price * $qty[$product->id]);
+                //+= total menjumlahkan dirinya sendiri
+            }
+        }
+
+
+        $data = [
+            'total'=>$total,
+            'productSelected'=> $productSelected,
+            'qty'=>$qty
+        ];
+
+        return view('cart/detail',$data);
+        
+    }
+
 }
+
