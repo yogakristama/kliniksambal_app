@@ -23,3 +23,9 @@ Route::get('/cart/content', 'CartController@getContent');
 Route::post('/cart/add-content', 'CartController@addContent');
 
 Route::get ('/cart/detail', 'CartController@getDetail');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+route::get('/admin', "AdminController@adminLayout");
+Auth::routes();
