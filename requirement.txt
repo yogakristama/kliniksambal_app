@@ -1,0 +1,33 @@
+Admin
+1. Product 
+    a. product-add
+    b. product-edit
+    c. product-delete
+    d. product-list
+    c. product- detail
+
+2. Media
+    a. media-add
+    b. media-edit
+    c. media-delete
+    d. media-list
+    c. media- detail
+
+3. Customer/user
+    a. user-add
+    b. user-edit
+    c. user-delete
+    d. user-list
+    c. user- detail
+
+4. frontend
+    -home- banner, product list footer
+    - product catalog
+    - product detail
+    - add to cart
+    - cart list
+    - checkout
+    - konfirmasi pembayaran
+    - my profile
+    - api
+
