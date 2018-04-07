@@ -6,11 +6,12 @@ use Illuminate\http\Request;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller {
-    function adminLayout(){
-        $admins = DB::select("Select * from admin");
-        $data = [
-            'admin' => $admins
-        ];
-        return view('admin/adminLayout', $data);
-    }
+   
+   public function __construct(){
+        $this->middleware('auth');
+   }
+    
+   public function index(){
+       return view ('admin/index');
+   }
 }
