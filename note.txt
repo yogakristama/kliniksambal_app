@@ -1,0 +1,41 @@
+yang harus dipahami 
+1. variable
+2. Tipe data (int, array, etc)
+3. control flow (if, while.. etc)
+4. function
+
+Karakteristik Bahasa Pemograman 
+1. Sintak
+2. Behavior (contoh: asynchronous)
+3. special feature
+4. purpose
+
+
+function penting parameter
+contoh 1 
+function salam(name){
+  console.log("selamat pagi"+name+" !");
+}
+
+salam("sita");
+
+Perhatikan keyword function
+parameter
+return statement
+
+//contoh 2 return statment
+function kaliTiga(angka){
+  var hasil = angka * 3;
+  return hasil;
+}
+kaliTiga(10);
+
+var a;
+a = kaliTiga(10);
+
+console.log("hasil = "+a);
+
+function asynchronous
+
+lebih bagus menggunakan let dibanding var
+

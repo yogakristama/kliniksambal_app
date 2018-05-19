@@ -28,4 +28,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 route::get('/admin', "AdminController@index");
+
+route::get('/admin/menu', "MenuController@adminIndex");
+
 Auth::routes();
